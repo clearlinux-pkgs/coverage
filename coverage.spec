@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 4.0
-Release  : 14
+Release  : 15
 URL      : https://pypi.python.org/packages/source/c/coverage/coverage-4.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/c/coverage/coverage-4.0.tar.gz
 Summary  : Code coverage measurement for Python
@@ -57,7 +57,7 @@ python3 -tt setup.py build -b py3 install --root=%{buildroot}
 %defattr(-,root,root,-)
 /usr/bin/coverage
 /usr/bin/coverage-2.7
-/usr/bin/coverage-3.4
+/usr/bin/coverage-3.5
 /usr/bin/coverage2
 /usr/bin/coverage3
 

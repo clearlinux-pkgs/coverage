@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 4.0.3
-Release  : 20
+Release  : 21
 URL      : https://pypi.python.org/packages/source/c/coverage/coverage-4.0.3.tar.gz
 Source0  : https://pypi.python.org/packages/source/c/coverage/coverage-4.0.3.tar.gz
 Summary  : Code coverage measurement for Python

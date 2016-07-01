@@ -1,5 +1,5 @@
 PKG_NAME := coverage
-URL := https://pypi.python.org/packages/source/c/coverage/coverage-4.0.3.tar.gz
+URL := http://pypi.debian.net/coverage/coverage-4.1.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common

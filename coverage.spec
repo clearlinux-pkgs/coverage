@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 4.2
-Release  : 25
+Release  : 26
 URL      : http://pypi.debian.net/coverage/coverage-4.2.tar.gz
 Source0  : http://pypi.debian.net/coverage/coverage-4.2.tar.gz
 Summary  : Code coverage measurement for Python
@@ -63,7 +63,7 @@ python3 -tt setup.py build -b py3 install --root=%{buildroot}
 %defattr(-,root,root,-)
 /usr/bin/coverage
 /usr/bin/coverage-2.7
-/usr/bin/coverage-3.5
+/usr/bin/coverage-3.6
 /usr/bin/coverage2
 /usr/bin/coverage3
 

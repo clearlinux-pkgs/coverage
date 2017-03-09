@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 4.3.4
-Release  : 30
+Release  : 31
 URL      : http://pypi.debian.net/coverage/coverage-4.3.4.tar.gz
 Source0  : http://pypi.debian.net/coverage/coverage-4.3.4.tar.gz
 Summary  : Code coverage measurement for Python
@@ -48,12 +48,12 @@ python components for the coverage package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487347935
+export SOURCE_DATE_EPOCH=1489025705
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1487347935
+export SOURCE_DATE_EPOCH=1489025705
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

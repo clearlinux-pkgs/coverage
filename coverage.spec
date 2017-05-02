@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 4.3.4
-Release  : 31
+Release  : 32
 URL      : http://pypi.debian.net/coverage/coverage-4.3.4.tar.gz
 Source0  : http://pypi.debian.net/coverage/coverage-4.3.4.tar.gz
 Summary  : Code coverage measurement for Python

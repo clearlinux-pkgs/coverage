@@ -1,0 +1,24 @@
+# This file contains recursive sources that require this package
+Cython-0:0.25.2-33.src
+Keras-0:2.0.8-12.src
+PyWavelets-0:0.5.2-3.src
+Theano-0:0.9.0-8.src
+WebTest-0:2.0.28-26.src
+ceph-0:11.2.0-41.src
+compat-opencv-soname32-0:3.2.0-2.src
+cov-core-0:1.15.0-15.src
+gensim-0:2.3.0-6.src
+gevent-0:1.2.2-9.src
+h5py-0:2.7.1-11.src
+matplotlib-0:2.0.2-20.src
+numpy-0:1.13.1-74.src
+opencv-0:3.3.0-27.src
+pandas-0:0.20.3-39.src
+pyquery-0:1.2.17-20.src
+pytest-cov-0:2.5.1-26.src
+scikit-image-0:0.13.0-15.src
+scikit-learn-0:0.18.2-40.src
+scipy-0:0.19.1-70.src
+tensorflow-0:1.3.0-17.src
+tflearn-0:0.3.2-7.src
+websockify-0:0.8.0-23.src

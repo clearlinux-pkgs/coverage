@@ -10,6 +10,7 @@ cov-core
 gensim
 gevent
 h5py
+hypothesis
 matplotlib
 numpy
 opencv

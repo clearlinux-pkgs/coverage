@@ -4,9 +4,11 @@ Keras
 PyWavelets
 Theano
 WebTest
+aeon
 bash_kernel
 ceph
 compat-opencv-soname32
+compat-opencv-soname33
 cov-core
 gensim
 gevent
@@ -17,6 +19,7 @@ ipython
 ipython-sql
 jupyter
 jupyter-notebook-gist
+jupyter_client
 matplotlib
 notebook
 numba

@@ -4,14 +4,13 @@
 #
 Name     : coverage
 Version  : 4.4.2
-Release  : 42
+Release  : 43
 URL      : http://pypi.debian.net/coverage/coverage-4.4.2.tar.gz
 Source0  : http://pypi.debian.net/coverage/coverage-4.4.2.tar.gz
 Summary  : Code coverage measurement for Python
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
 Requires: coverage-bin
-Requires: coverage-legacypython
 Requires: coverage-python3
 Requires: coverage-python
 BuildRequires : pbr
@@ -37,6 +36,14 @@ Group: Binaries
 bin components for the coverage package.
 
 
+%package extras
+Summary: extras components for the coverage package.
+Group: Default
+
+%description extras
+extras components for the coverage package.
+
+
 %package legacypython
 Summary: legacypython components for the coverage package.
 Group: Default
@@ -49,7 +56,6 @@ legacypython components for the coverage package.
 %package python
 Summary: python components for the coverage package.
 Group: Default
-Requires: coverage-legacypython
 Requires: coverage-python3
 
 %description python
@@ -73,12 +79,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1510262843
+export SOURCE_DATE_EPOCH=1519146665
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1510262843
+export SOURCE_DATE_EPOCH=1519146665
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -91,11 +97,16 @@ echo ----[ mark ]----
 
 %files bin
 %defattr(-,root,root,-)
+%exclude /usr/bin/coverage-2.7
+%exclude /usr/bin/coverage2
 /usr/bin/coverage
-/usr/bin/coverage-2.7
 /usr/bin/coverage-3.6
-/usr/bin/coverage2
 /usr/bin/coverage3
+
+%files extras
+%defattr(-,root,root,-)
+/usr/bin/coverage-2.7
+/usr/bin/coverage2
 
 %files legacypython
 %defattr(-,root,root,-)

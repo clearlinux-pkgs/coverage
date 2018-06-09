@@ -1,7 +1,10 @@
 # This file contains recursive sources that require this package
 Cython
 Keras
+Keras_Applications
+Keras_Preprocessing
 PyWavelets
+R-fastcluster
 Theano
 WebTest
 aeon
@@ -20,7 +23,10 @@ ipython-sql
 jupyter
 jupyter-notebook-gist
 jupyter_client
+jupyterlab
+jupyterlab_launcher
 matplotlib
+nose-cov
 notebook
 numba
 numpy

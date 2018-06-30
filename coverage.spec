@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 4.5.1
-Release  : 53
+Release  : 54
 URL      : http://pypi.debian.net/coverage/coverage-4.5.1.tar.gz
 Source0  : http://pypi.debian.net/coverage/coverage-4.5.1.tar.gz
 Summary  : Code coverage measurement for Python
@@ -12,13 +12,15 @@ Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
 Requires: coverage-bin
 Requires: coverage-python3
+Requires: coverage-license
 Requires: coverage-python
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pytest
-
+BuildRequires : python-core
+BuildRequires : python3-core
 BuildRequires : python3-dev
 BuildRequires : setuptools
 BuildRequires : setuptools-legacypython
@@ -32,6 +34,7 @@ BuildRequires : virtualenv
 %package bin
 Summary: bin components for the coverage package.
 Group: Binaries
+Requires: coverage-license
 
 %description bin
 bin components for the coverage package.
@@ -52,6 +55,14 @@ Requires: python-core
 
 %description legacypython
 legacypython components for the coverage package.
+
+
+%package license
+Summary: license components for the coverage package.
+Group: Default
+
+%description license
+license components for the coverage package.
 
 
 %package python
@@ -80,13 +91,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528559904
+export SOURCE_DATE_EPOCH=1530364997
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1528559904
+export SOURCE_DATE_EPOCH=1530364997
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/coverage
+cp LICENSE.txt %{buildroot}/usr/share/doc/coverage/LICENSE.txt
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 echo ----[ mark ]----
@@ -101,7 +114,7 @@ echo ----[ mark ]----
 %exclude /usr/bin/coverage-2.7
 %exclude /usr/bin/coverage2
 /usr/bin/coverage
-/usr/bin/coverage-3.6
+/usr/bin/coverage-3.7
 /usr/bin/coverage3
 
 %files extras
@@ -112,6 +125,10 @@ echo ----[ mark ]----
 %files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/coverage/LICENSE.txt
 
 %files python
 %defattr(-,root,root,-)

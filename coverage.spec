@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 4.5.2
-Release  : 61
+Release  : 62
 URL      : https://files.pythonhosted.org/packages/fb/af/ce7b0fe063ee0142786ee53ad6197979491ce0785567b6d8be751d2069e8/coverage-4.5.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/fb/af/ce7b0fe063ee0142786ee53ad6197979491ce0785567b6d8be751d2069e8/coverage-4.5.2.tar.gz
 Summary  : Code coverage measurement for Python

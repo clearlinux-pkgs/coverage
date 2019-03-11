@@ -3,7 +3,10 @@ Cython
 WebTest
 amqp
 case
+certbot
+codecov
 cov-core
 nosexcover
 pyquery
 pytest-cov
+responses

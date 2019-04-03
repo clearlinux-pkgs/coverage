@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 4.5.3
-Release  : 63
+Release  : 64
 URL      : https://files.pythonhosted.org/packages/82/70/2280b5b29a0352519bb95ab0ef1ea942d40466ca71c53a2085bdeff7b0eb/coverage-4.5.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/82/70/2280b5b29a0352519bb95ab0ef1ea942d40466ca71c53a2085bdeff7b0eb/coverage-4.5.3.tar.gz
 Summary  : Code coverage measurement for Python
@@ -14,7 +14,6 @@ Requires: coverage-bin = %{version}-%{release}
 Requires: coverage-license = %{version}-%{release}
 Requires: coverage-python = %{version}-%{release}
 Requires: coverage-python3 = %{version}-%{release}
-BuildRequires : buildreq-distutils23
 BuildRequires : buildreq-distutils3
 BuildRequires : pluggy
 BuildRequires : py-python
@@ -34,23 +33,6 @@ Requires: coverage-license = %{version}-%{release}
 
 %description bin
 bin components for the coverage package.
-
-
-%package extras
-Summary: extras components for the coverage package.
-Group: Default
-
-%description extras
-extras components for the coverage package.
-
-
-%package legacypython
-Summary: legacypython components for the coverage package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the coverage package.
 
 
 %package license
@@ -87,18 +69,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552329238
-export LDFLAGS="${LDFLAGS} -fno-lto"
-python2 setup.py build -b py2
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1554307201
+export MAKEFLAGS=%{?_smp_mflags}
+python3 setup.py build
 
 %install
-export SOURCE_DATE_EPOCH=1552329238
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/coverage
 cp LICENSE.txt %{buildroot}/usr/share/package-licenses/coverage/LICENSE.txt
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -108,20 +88,9 @@ echo ----[ mark ]----
 
 %files bin
 %defattr(-,root,root,-)
-%exclude /usr/bin/coverage-2.7
-%exclude /usr/bin/coverage2
 /usr/bin/coverage
 /usr/bin/coverage-3.7
 /usr/bin/coverage3
-
-%files extras
-%defattr(-,root,root,-)
-/usr/bin/coverage-2.7
-/usr/bin/coverage2
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files license
 %defattr(0644,root,root,0755)

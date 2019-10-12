@@ -3,10 +3,13 @@ Cython
 WebTest
 amqp
 case
+ceph
 certbot
 codecov
 cov-core
+grpcio
 nosexcover
 pyquery
 pytest-cov
+python-coveralls
 responses

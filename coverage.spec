@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 4.5.4
-Release  : 68
+Release  : 69
 URL      : https://files.pythonhosted.org/packages/85/d5/818d0e603685c4a613d56f065a721013e942088047ff1027a632948bdae6/coverage-4.5.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/85/d5/818d0e603685c4a613d56f065a721013e942088047ff1027a632948bdae6/coverage-4.5.4.tar.gz
 Summary  : Code coverage measurement for Python
@@ -18,7 +18,6 @@ BuildRequires : buildreq-distutils3
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pytest
-BuildRequires : setuptools-legacypython
 BuildRequires : tox
 BuildRequires : virtualenv
 
@@ -69,8 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1570910142
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1571089606
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -83,7 +81,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/coverage
-cp LICENSE.txt %{buildroot}/usr/share/package-licenses/coverage/LICENSE.txt
+cp %{_builddir}/coverage-4.5.4/LICENSE.txt %{buildroot}/usr/share/package-licenses/coverage/598f87f072f66e2269dd6919292b2934dbb20492
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -100,7 +98,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/coverage/LICENSE.txt
+/usr/share/package-licenses/coverage/598f87f072f66e2269dd6919292b2934dbb20492
 
 %files python
 %defattr(-,root,root,-)

@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 4.5.4
-Release  : 69
+Release  : 71
 URL      : https://files.pythonhosted.org/packages/85/d5/818d0e603685c4a613d56f065a721013e942088047ff1027a632948bdae6/coverage-4.5.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/85/d5/818d0e603685c4a613d56f065a721013e942088047ff1027a632948bdae6/coverage-4.5.4.tar.gz
 Summary  : Code coverage measurement for Python
@@ -19,6 +19,7 @@ BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pytest
 BuildRequires : tox
+BuildRequires : util-linux
 BuildRequires : virtualenv
 
 %description
@@ -62,13 +63,14 @@ python3 components for the coverage package.
 
 %prep
 %setup -q -n coverage-4.5.4
+cd %{_builddir}/coverage-4.5.4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571089606
+export SOURCE_DATE_EPOCH=1573161098
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -93,7 +95,7 @@ echo ----[ mark ]----
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/coverage
-/usr/bin/coverage-3.7
+/usr/bin/coverage-3.8
 /usr/bin/coverage3
 
 %files license

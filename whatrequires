@@ -8,6 +8,7 @@ ceph
 certbot
 codecov
 cov-core
+grpc
 grpcio
 nosexcover
 pyquery

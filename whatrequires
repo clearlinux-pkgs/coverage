@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 Cython
-Pygments
 WebTest
 amqp
 case
@@ -8,10 +7,14 @@ ceph
 certbot
 codecov
 cov-core
+django-nose
 grpc
 grpcio
+natsort
+nbval
 nosexcover
 pyquery
 pytest-cov
 python-coveralls
 responses
+sos

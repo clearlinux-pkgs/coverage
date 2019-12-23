@@ -10,6 +10,7 @@ cov-core
 django-nose
 grpc
 grpcio
+koji
 natsort
 nbval
 nosexcover

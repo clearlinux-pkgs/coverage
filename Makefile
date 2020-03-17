@@ -1,5 +1,5 @@
 PKG_NAME := coverage
-URL = https://files.pythonhosted.org/packages/6d/1d/d44ed71d9a254453f4dd296cadf497957454995a35defcc7a7424caec89d/coverage-5.0.3.tar.gz
+URL = https://files.pythonhosted.org/packages/d1/7d/ac53d7350a5178c1f59ddf0f17552bf68e4bb3a202543f9a30bbaa46cf80/coverage-5.0.4.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

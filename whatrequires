@@ -3,13 +3,13 @@ Cython
 WebTest
 amqp
 case
-ceph
 certbot
 codecov
 cov-core
 django-nose
 grpc
 grpcio
+intel-cmt-cat
 koji
 natsort
 nbval

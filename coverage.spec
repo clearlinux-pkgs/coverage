@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 5.3
-Release  : 84
+Release  : 85
 URL      : https://files.pythonhosted.org/packages/da/50/4c0c93ea67c8b42aa700cfbdedd64ea5ac5e7108ba14e3e744f57309304b/coverage-5.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/da/50/4c0c93ea67c8b42aa700cfbdedd64ea5ac5e7108ba14e3e744f57309304b/coverage-5.3.tar.gz
 Summary  : Code coverage measurement for Python

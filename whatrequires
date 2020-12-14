@@ -1,21 +1,16 @@
 # This file contains recursive sources that require this package
 Cython
 WebTest
-amqp
-case
 certbot
-codecov
 cov-core
 django-nose
 grpc
 grpcio
-intel-cmt-cat
 koji
-natsort
 nbval
 nosexcover
 pyquery
 pytest-cov
-python-coveralls
+python-magic
 responses
 sos

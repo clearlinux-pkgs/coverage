@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 5.3
-Release  : 87
+Release  : 88
 URL      : https://files.pythonhosted.org/packages/da/50/4c0c93ea67c8b42aa700cfbdedd64ea5ac5e7108ba14e3e744f57309304b/coverage-5.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/da/50/4c0c93ea67c8b42aa700cfbdedd64ea5ac5e7108ba14e3e744f57309304b/coverage-5.3.tar.gz
 Summary  : Code coverage measurement for Python
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1600104726
+export SOURCE_DATE_EPOCH=1607989442
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -97,7 +97,7 @@ echo ----[ mark ]----
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/coverage
-/usr/bin/coverage-3.8
+/usr/bin/coverage-3.9
 /usr/bin/coverage3
 
 %files license

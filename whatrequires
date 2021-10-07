@@ -10,7 +10,6 @@ koji
 nbval
 nosexcover
 pyquery
-pytest-cov
 python-magic
 responses
 sos

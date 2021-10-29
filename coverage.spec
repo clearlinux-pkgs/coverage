@@ -4,7 +4,7 @@
 #
 Name     : coverage
 Version  : 6.0.2
-Release  : 103
+Release  : 104
 URL      : https://files.pythonhosted.org/packages/24/24/f95d9d306081b4265fd05eb5d2646984bfe2bb34a33fd5ff84a77605918c/coverage-6.0.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/24/24/f95d9d306081b4265fd05eb5d2646984bfe2bb34a33fd5ff84a77605918c/coverage-6.0.2.tar.gz
 Summary  : Code coverage measurement for Python
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1634003857
+export SOURCE_DATE_EPOCH=1635467532
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -97,7 +97,7 @@ echo ----[ mark ]----
 %files bin
 %defattr(-,root,root,-)
 /usr/bin/coverage
-/usr/bin/coverage-3.9
+/usr/bin/coverage-3.10
 /usr/bin/coverage3
 
 %files license
